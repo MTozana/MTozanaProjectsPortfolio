@@ -6,8 +6,15 @@
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
         body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -24,29 +31,32 @@
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
-.project-card {
-    transition: transform 0.3s ease-in-out;
-    width: 18rem;
-}
-.project-card:hover {
-    transform: scale(1.05);
-}
+
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
 }
-footer {
+
+.hover-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .projects-container {
+        flex-direction: column;
+    }
+}
+.footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
     </style>
 </head>
@@ -76,42 +86,151 @@ footer {
     </header>
 
     <section id="projects" class="container my-5">
-        <h3 class="text-center mb-4">Projects</h3>
+        <h3 class="text-center mb-4 text-secondary">Check out some of my featured projects below</h3>
+
         <div class="projects-container">
-            <div class="card project-card shadow-lg p-3 rounded">
-                <img src="images/darktheme.png" class="card-img-top rounded" alt="Project 1">
-                <div class="card-body">
-                    <p class="card-text">Light to dark theme project: <a href="https://www.shecodes.io/cohorts/2245/projects/2502915" target="_blank">View Project</a></p>
+            <div class="row mb-5 align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card project-card shadow-lg p-3 rounded hover-zoom">
+                        <img src="images/darktheme.png" class="card-img-top rounded" alt="Light to Dark Theme Project">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Light to dark theme project:
+                                <a href="https://www.shecodes.io/cohorts/2245/projects/2502915?_gl=1*1abfii1*_gcl_au*MTc0NjY2ODQ2Mi4xNzQxNTk5OTcw" target="_blank">View Project</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card project-card shadow-lg p-3 rounded">
-                <img src="images/2025-03-10 (18).png" class="card-img-top rounded" alt="Project 2">
-                <div class="card-body">
-                    <p class="card-text">World Clock project: <a href="https://www.shecodes.io/cohorts/2319/projects/2529075" target="_blank">View Project</a></p>
-                </div>
-            </div>
-            <div class="card project-card shadow-lg p-3 rounded">
-                <img src="images/2025-03-10 (22).png" class="card-img-top rounded" alt="Project 3">
-                <div class="card-body">
-                    <p class="card-text">Weather App project: <a href="https://www.shecodes.io/cohorts/2306/projects/2507191" target="_blank">View Project</a></p>
-                </div>
-            </div>
-            <div class="card project-card shadow-lg p-3 rounded">
-                <img src="images/2025-03-10 (4).png" class="card-img-top rounded" alt="Project 4">
-                <div class="card-body">
-                    <p class="card-text">AI Generator project: <a href="https://www.shecodes.io/cohorts/2356/projects/2532088" target="_blank">View Project</a></p>
-                </div>
-            </div>
-            <div class="card project-card shadow-lg p-3 rounded">
-                <img src="images/2025-03-10 (14).png" class="card-img-top rounded" alt="Tozana Translation App">
-                <div class="card-body">
-                    <p class="card-text">Language Translation App: <a href="https://tozana-translation-app.netlify.app/" target="_blank">View Project</a></p>
+                <div class="col-lg-6">
+                    <div class="project-description">
+                        <h2 class="mb-4">Light to Dark Theme Project</h2>
+                        <p class="mb-4 text-muted">
+                            I entered the world of front-end development by gaining some knowledge in HTML, CSS, and JavaScript.
+                            I used my knowledge of these languages, along with my new skills in VS Code, to build a landing page
+                            that showcases animation and a page theme change from bright to dark. The page utilizes JavaScript
+                            functions to create user interaction.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+     
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card project-card shadow-lg p-3 rounded hover-zoom">
+                    <img src="images/2025-03-10 (18).png" class="card-img-top rounded" alt="world clock project">
+                    <div class="card-body">
+                            <p class="card-text">World Clock project: 
+                                <a href="https://www.shecodes.io/cohorts/2319/projects/2529075?_gl=1*11xzcth*_gcl_au*MTc0NjY2ODQ2Mi4xNzQxNTk5OTcw" target="_blank">View Project</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-description">
+                        <h2 class="mb-4">World Clock project</h2>
+                        <p class="mb-4 text-muted">
+                            This project showcases my skills in JavaScript by building a world clock that dynamically displays the current time for multiple cities worldwide. The clock updates in real time, allowing users to switch between different time zones seamlessly. I used JavaScript’s Date object and event listeners to make the interface interactive and user-friendly. The design is built with HTML, CSS, and Bootstrap for a clean, responsive layout.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card project-card shadow-lg p-3 rounded hover-zoom">
+                    <img src="images/2025-03-10 (22).png" class="card-img-top rounded" alt="Weather App project">
+                    <div class="card-body">
+                            <p class="card-text">Weather App project: 
+                                <a href="https://www.shecodes.io/cohorts/2306/projects/2507191?_gl=1*1grm87*_gcl_au*MTc0NjY2ODQ2Mi4xNzQxNTk5OTcw" target="_blank">View Project</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-description">
+                        <h2 class="mb-4">Weather App project</h2>
+                        <p class="mb-4 text-muted">
+                            I built a Vanilla JavaScript weather app in SheCodes Plus, an advanced 8-week JavaScript coding workshop. 
+                            Building upon my previously-gained knowledge, I also became skilled in Bootstrap, APIs, real-life development workflow, hosting, and advanced JavaScript.
+                             I combined all of these skills to create a fully-functioning weather app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card project-card shadow-lg p-3 rounded hover-zoom">
+                    <img src="images/2025-03-10 (4).png" class="card-img-top rounded" alt="AI Generator project">
+                    <div class="card-body">
+                            <p class="card-text">AI Generator project: 
+                                <a href="https://www.shecodes.io/cohorts/2356/projects/2532088?_gl=1*k5g0tc*_gcl_au*MTc0NjY2ODQ2Mi4xNzQxNTk5OTcw" target="_blank">View Project</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-description">
+                        <h2 class="mb-4">AI Generator project</h2>
+                        <p class="mb-4 text-muted">
+                            The AI Generator project leverages artificial intelligence to generate content based on user input. I integrated an AI-powered API to process text and provide meaningful outputs. This project allowed me to explore the potential of AI in front-end development while refining my JavaScript and API-handling skills. The interface is designed with a modern, intuitive layout using HTML and CSS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card project-card shadow-lg p-3 rounded hover-zoom">
+                    <img src="images/2025-03-10 (14).png" class="card-img-top rounded" alt="Language Translation  Project">
+                    <div class="card-body">
+                            <p class="card-text">Language Translation App: 
+                                <a href="https://tozana-translation-app.netlify.app/" target="_blank">View Project</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="project-description">
+                <h2 class="mb-4">Language Translation App</h2>
+                <p class="mb-4 text-muted">
+                    The Language Translation App is a web-based tool that enables users to translate text between different languages. It utilizes a translation API to process and return accurate translations instantly. I built this project to deepen my understanding of API integration and asynchronous JavaScript. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
+    <section id="contact" class="container my-5">
+        <h3 class="text-center mb-4 text-secondary">Contact Me</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-envelope-fill me-3"></i>
+                        <a href="mailto:violettozana@gmail.com" class="text-decoration-none text-dark">violettozana@gmail.com</a>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-telephone-fill me-3"></i>
+                        <a href="tel:+27622197753" class="text-decoration-none text-dark">+27 62 219 7753</a>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-github me-3"></i>
+                        <a href="https://github.com/MTozana" target="_blank" class="text-decoration-none text-dark">github.com/MTozana</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
     <footer id="contact">
         <p>&copy; 2025 Front-End Developer Portfolio | Designed with ❤️</p>
     </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
