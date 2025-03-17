@@ -58,26 +58,7 @@
     padding: 20px 0;
     margin-top: 40px;
 }
-#scrollUpBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        border: none;
-        outline: none;
-        background-color: lightgrey;
-        color: white;
-        cursor: pointer;
-        padding: 10px 15px;
-        border-radius: 50%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: opacity 0.3s ease-in-out;
-    }
 
-    #scrollUpBtn:hover {
-        background-color: lightpink;
-    }
     </style>
 </head>
 <body>
@@ -246,30 +227,49 @@
             </div>
         </div>
     </section>
-    
+
+    <button id="scrollUpBtn" class="btn btn-primary" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
     <footer id="contact">
         <p>&copy; 2025 Front-End Developer Portfolio | Designed with ❤️</p>
 
     </footer>
-    <button id="scrollUpBtn" class="btn btn-primary" title="Go to top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"><script>
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
         let scrollUpBtn = document.getElementById("scrollUpBtn");
-        window.onscroll = function () {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            scrollUpBtn.style.display = "block";
-        } else {
-            scrollUpBtn.style.display = "none";
+
+        if (!scrollUpBtn) {
+            console.error("Scroll Up Button not found!");
+            return;
         }
-    };
-    scrollUpBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+
+        scrollUpBtn.style.opacity = "0";
+        scrollUpBtn.style.visibility = "hidden";
+        scrollUpBtn.style.transition = "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out";
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {
+                scrollUpBtn.style.opacity = "1";
+                scrollUpBtn.style.visibility = "visible";
+            } else {
+                scrollUpBtn.style.opacity = "0";
+                scrollUpBtn.style.visibility = "hidden";
+            }
+        });
+
+        scrollUpBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     });
-    </script>
+</script>
 
 </body>
 </html>
