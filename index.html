@@ -229,8 +229,27 @@
     
     <footer id="contact">
         <p>&copy; 2025 Front-End Developer Portfolio | Designed with ❤️</p>
+
     </footer>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <button id="scrollUpBtn" class="btn btn-primary" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
+        let scrollUpBtn = document.getElementById("scrollUpBtn");
+        window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollUpBtn.style.display = "block";
+        } else {
+            scrollUpBtn.style.display = "none";
+        }
+    };
+    scrollUpBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    </script>
 
 </body>
 </html>
