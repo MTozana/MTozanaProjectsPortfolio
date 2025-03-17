@@ -18,6 +18,38 @@
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
 }
+
+.animated-navbar {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff7eb3);
+    padding: 15px 0;
+    transition: background 0.5s ease-in-out;
+}
+
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important; /* Gold color on hover */
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: rotate(-3deg);
+}
+
 .hero {
     background:linear-gradient(68.1deg, rgb(248, 205, 205) -0.3%, rgb(149, 170, 211) 100.7%);
     color: white;
