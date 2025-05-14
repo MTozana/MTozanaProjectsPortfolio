@@ -66,7 +66,7 @@
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .hover-zoom {
@@ -115,11 +115,14 @@
     border-radius: 10px;
 }
 #skills {
-    background: #f8f9fa; 
+    background: lightgrey; 
     padding: 50px 20px;
     border-radius: 10px;
 }
-
+#projects{
+    padding: 50px 20px;
+    border-radius: 10px;
+}
 .skill-icon {
     width: 80px; 
     height: auto;
@@ -130,7 +133,7 @@
     transform: scale(1.2);
 }
 #projects {
-    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff7eb3);
+    background:linear-gradient(68.1deg, rgb(248, 205, 205) -0.3%, rgb(149, 170, 211) 100.7%);
     padding: 50px 0;
     color: white;
 }
@@ -150,8 +153,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -165,13 +168,33 @@
         <h2>Front-End Developer Portfolio</h2>
         <p>Passionate about web performance and user-friendly web experiences.</p>
         <p></p>
-        <a href="cv.pdf/TVM CV.pdf" download="Tozana_Mshungwana_CV.pdf" class="btn btn-custom">
+        <a href="cv.pdf/tv mshungwana cv.pdf" download="Tozana_Mshungwana_CV.pdf" class="btn btn-custom">
             <i class="bi bi-download"></i> Download CV
         </a>
         
     </header>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="text-center mb-4">About Me</h2>
+              <p class="lead text-muted">
+                I'm a passionate and motivated <strong>front-end developer</strong> with a strong desire to grow and evolve in the tech industry. While I'm still early in my journey, I've already gained hands-on experience designing and developing user-friendly websites, and I've contributed to improving products with a focus on <strong>UI/UX</strong>.
+              </p>
+              <p class="text-muted">
+                Although my exposure to corporate-level projects has been limited, it has sparked a deep hunger to learn more, build better, and become part of high-impact teams. I'm open to new opportunities, eager to take on challenges, and constantly working to improve my skills and stay up-to-date with industry standards.
+              </p>
+              <p class="text-muted">
+                If you're looking for someone who's driven, adaptable, and ready to grow—I'm here and excited to connect.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     <section id="skills" class="container my-5">
-        <h3 class="text-center mb-4 text-secondary">My Skills</h3>
+        <h3 class="text-center mb-4 text-white">My Skills</h3>
         <div class="row text-center">
             <div class="col-md-3 col-6">
                 <img src="images/IMG_1821.WEBP" alt="HTML" class="skill-icon">
@@ -195,7 +218,7 @@
     </section>
     
     <section id="projects" class="container my-5 bg-dark text-white p-5">
-        <h3 class="text-center mb-4 text-secondary">Check out some of my featured projects below</h3>
+        <h3 class="text-center mb-4 text-white">Check out some of my featured projects below</h3>
     </section>
     
         <div class="projects-container">
@@ -331,7 +354,12 @@
                     <li class="list-group-item d-flex align-items-center">
                         <i class="bi bi-github me-3"></i>
                         <a href="https://github.com/MTozana" target="_blank" class="text-decoration-none text-dark">github.com/MTozana</a>
+
+                    </li> <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-netlify me-3"></i>
+                        <a href="https://mtozanaprojects.netlify.app" target="_blank" class="text-decoration-none text-dark">netlify.com/MTozana</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -341,7 +369,7 @@
         <i class="bi bi-arrow-up"></i>
     </button>
     <footer id="contact">
-        <p>&copy; 2025 Front-End Developer Portfolio | Designed with ❤️</p>
+        <p>&copy; 2025 Front-End Developer Portfolio | Designed with ❤️ by MTozana</p>
 
     </footer>
    
